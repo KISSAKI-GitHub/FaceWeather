@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		211077AE13E0005600D9BE97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211077AD13E0005600D9BE97 /* UIKit.framework */; };
+		211077B013E0005600D9BE97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211077AF13E0005600D9BE97 /* Foundation.framework */; };
+		211077B213E0005600D9BE97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211077B113E0005600D9BE97 /* CoreGraphics.framework */; };
+		211077B813E0005600D9BE97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 211077B613E0005600D9BE97 /* InfoPlist.strings */; };
+		211077BB13E0005600D9BE97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 211077BA13E0005600D9BE97 /* main.m */; };
+		211077BE13E0005600D9BE97 /* FaceWeatherAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 211077BD13E0005600D9BE97 /* FaceWeatherAppDelegate.m */; };
+		211077C213E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 211077C113E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.m */; };
+		211077C513E0005600D9BE97 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 211077C313E0005600D9BE97 /* MainWindow_iPhone.xib */; };
+		211077C913E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 211077C813E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.m */; };
+		211077CC13E0005600D9BE97 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 211077CA13E0005600D9BE97 /* MainWindow_iPad.xib */; };
+		211077D313E0005700D9BE97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211077AD13E0005600D9BE97 /* UIKit.framework */; };
+		211077D413E0005700D9BE97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211077AF13E0005600D9BE97 /* Foundation.framework */; };
+		211077D513E0005700D9BE97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211077B113E0005600D9BE97 /* CoreGraphics.framework */; };
+		211077DD13E0005700D9BE97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 211077DB13E0005700D9BE97 /* InfoPlist.strings */; };
+		211077E013E0005700D9BE97 /* FaceWeatherTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 211077DF13E0005700D9BE97 /* FaceWeatherTests.h */; };
+		211077E213E0005700D9BE97 /* FaceWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 211077E113E0005700D9BE97 /* FaceWeatherTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		211077D613E0005700D9BE97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 211077A013E0005600D9BE97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 211077A813E0005600D9BE97;
+			remoteInfo = FaceWeather;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		211077A913E0005600D9BE97 /* FaceWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		211077AD13E0005600D9BE97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		211077AF13E0005600D9BE97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		211077B113E0005600D9BE97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		211077B513E0005600D9BE97 /* FaceWeather-Info.plist */ = {isa = PBXFileReference; path = "FaceWeather-Info.plist"; sourceTree = "<group>"; };
+		211077B713E0005600D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		211077B913E0005600D9BE97 /* FaceWeather-Prefix.pch */ = {isa = PBXFileReference; path = "FaceWeather-Prefix.pch"; sourceTree = "<group>"; };
+		211077BA13E0005600D9BE97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		211077BC13E0005600D9BE97 /* FaceWeatherAppDelegate.h */ = {isa = PBXFileReference; path = FaceWeatherAppDelegate.h; sourceTree = "<group>"; };
+		211077BD13E0005600D9BE97 /* FaceWeatherAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceWeatherAppDelegate.m; sourceTree = "<group>"; };
+		211077C013E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = FaceWeatherAppDelegate_iPhone.h; path = iPhone/FaceWeatherAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		211077C113E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FaceWeatherAppDelegate_iPhone.m; path = iPhone/FaceWeatherAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		211077C413E0005600D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		211077C713E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.h */ = {isa = PBXFileReference; name = FaceWeatherAppDelegate_iPad.h; path = iPad/FaceWeatherAppDelegate_iPad.h; sourceTree = "<group>"; };
+		211077C813E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FaceWeatherAppDelegate_iPad.m; path = iPad/FaceWeatherAppDelegate_iPad.m; sourceTree = "<group>"; };
+		211077CB13E0005600D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		211077D213E0005700D9BE97 /* FaceWeatherTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceWeatherTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		211077DA13E0005700D9BE97 /* FaceWeatherTests-Info.plist */ = {isa = PBXFileReference; path = "FaceWeatherTests-Info.plist"; sourceTree = "<group>"; };
+		211077DC13E0005700D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		211077DE13E0005700D9BE97 /* FaceWeatherTests-Prefix.pch */ = {isa = PBXFileReference; path = "FaceWeatherTests-Prefix.pch"; sourceTree = "<group>"; };
+		211077DF13E0005700D9BE97 /* FaceWeatherTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceWeatherTests.h; sourceTree = "<group>"; };
+		211077E113E0005700D9BE97 /* FaceWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceWeatherTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		211077A613E0005600D9BE97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				211077AE13E0005600D9BE97 /* UIKit.framework in Frameworks */,
+				211077B013E0005600D9BE97 /* Foundation.framework in Frameworks */,
+				211077B213E0005600D9BE97 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		211077CE13E0005700D9BE97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				211077D313E0005700D9BE97 /* UIKit.framework in Frameworks */,
+				211077D413E0005700D9BE97 /* Foundation.framework in Frameworks */,
+				211077D513E0005700D9BE97 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2110779E13E0005600D9BE97 = {
+			isa = PBXGroup;
+			children = (
+				211077B313E0005600D9BE97 /* FaceWeather */,
+				211077D813E0005700D9BE97 /* FaceWeatherTests */,
+				211077AC13E0005600D9BE97 /* Frameworks */,
+				211077AA13E0005600D9BE97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		211077AA13E0005600D9BE97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				211077A913E0005600D9BE97 /* FaceWeather.app */,
+				211077D213E0005700D9BE97 /* FaceWeatherTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		211077AC13E0005600D9BE97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				211077AD13E0005600D9BE97 /* UIKit.framework */,
+				211077AF13E0005600D9BE97 /* Foundation.framework */,
+				211077B113E0005600D9BE97 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		211077B313E0005600D9BE97 /* FaceWeather */ = {
+			isa = PBXGroup;
+			children = (
+				211077BC13E0005600D9BE97 /* FaceWeatherAppDelegate.h */,
+				211077BD13E0005600D9BE97 /* FaceWeatherAppDelegate.m */,
+				211077BF13E0005600D9BE97 /* iPhone */,
+				211077C613E0005600D9BE97 /* iPad */,
+				211077B413E0005600D9BE97 /* Supporting Files */,
+			);
+			path = FaceWeather;
+			sourceTree = "<group>";
+		};
+		211077B413E0005600D9BE97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				211077B513E0005600D9BE97 /* FaceWeather-Info.plist */,
+				211077B613E0005600D9BE97 /* InfoPlist.strings */,
+				211077B913E0005600D9BE97 /* FaceWeather-Prefix.pch */,
+				211077BA13E0005600D9BE97 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		211077BF13E0005600D9BE97 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				211077C013E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.h */,
+				211077C113E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.m */,
+				211077C313E0005600D9BE97 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		211077C613E0005600D9BE97 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				211077C713E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.h */,
+				211077C813E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.m */,
+				211077CA13E0005600D9BE97 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		211077D813E0005700D9BE97 /* FaceWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				211077DF13E0005700D9BE97 /* FaceWeatherTests.h */,
+				211077E113E0005700D9BE97 /* FaceWeatherTests.m */,
+				211077D913E0005700D9BE97 /* Supporting Files */,
+			);
+			path = FaceWeatherTests;
+			sourceTree = "<group>";
+		};
+		211077D913E0005700D9BE97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				211077DA13E0005700D9BE97 /* FaceWeatherTests-Info.plist */,
+				211077DB13E0005700D9BE97 /* InfoPlist.strings */,
+				211077DE13E0005700D9BE97 /* FaceWeatherTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		211077A813E0005600D9BE97 /* FaceWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 211077E513E0005700D9BE97 /* Build configuration list for PBXNativeTarget "FaceWeather" */;
+			buildPhases = (
+				211077A513E0005600D9BE97 /* Sources */,
+				211077A613E0005600D9BE97 /* Frameworks */,
+				211077A713E0005600D9BE97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceWeather;
+			productName = FaceWeather;
+			productReference = 211077A913E0005600D9BE97 /* FaceWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		211077D113E0005700D9BE97 /* FaceWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 211077E813E0005700D9BE97 /* Build configuration list for PBXNativeTarget "FaceWeatherTests" */;
+			buildPhases = (
+				211077CD13E0005700D9BE97 /* Sources */,
+				211077CE13E0005700D9BE97 /* Frameworks */,
+				211077CF13E0005700D9BE97 /* Resources */,
+				211077D013E0005700D9BE97 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				211077D713E0005700D9BE97 /* PBXTargetDependency */,
+			);
+			name = FaceWeatherTests;
+			productName = FaceWeatherTests;
+			productReference = 211077D213E0005700D9BE97 /* FaceWeatherTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		211077A013E0005600D9BE97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = KISSAKI;
+			};
+			buildConfigurationList = 211077A313E0005600D9BE97 /* Build configuration list for PBXProject "FaceWeather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2110779E13E0005600D9BE97;
+			productRefGroup = 211077AA13E0005600D9BE97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				211077A813E0005600D9BE97 /* FaceWeather */,
+				211077D113E0005700D9BE97 /* FaceWeatherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		211077A713E0005600D9BE97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				211077B813E0005600D9BE97 /* InfoPlist.strings in Resources */,
+				211077C513E0005600D9BE97 /* MainWindow_iPhone.xib in Resources */,
+				211077CC13E0005600D9BE97 /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		211077CF13E0005700D9BE97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				211077DD13E0005700D9BE97 /* InfoPlist.strings in Resources */,
+				211077E013E0005700D9BE97 /* FaceWeatherTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		211077D013E0005700D9BE97 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		211077A513E0005600D9BE97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				211077BB13E0005600D9BE97 /* main.m in Sources */,
+				211077BE13E0005600D9BE97 /* FaceWeatherAppDelegate.m in Sources */,
+				211077C213E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.m in Sources */,
+				211077C913E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		211077CD13E0005700D9BE97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				211077E213E0005700D9BE97 /* FaceWeatherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		211077D713E0005700D9BE97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 211077A813E0005600D9BE97 /* FaceWeather */;
+			targetProxy = 211077D613E0005700D9BE97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		211077B613E0005600D9BE97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				211077B713E0005600D9BE97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		211077C313E0005600D9BE97 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				211077C413E0005600D9BE97 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		211077CA13E0005600D9BE97 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				211077CB13E0005600D9BE97 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+		211077DB13E0005700D9BE97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				211077DC13E0005700D9BE97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		211077E313E0005700D9BE97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		211077E413E0005700D9BE97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		211077E613E0005700D9BE97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceWeather/FaceWeather-Prefix.pch";
+				INFOPLIST_FILE = "FaceWeather/FaceWeather-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		211077E713E0005700D9BE97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceWeather/FaceWeather-Prefix.pch";
+				INFOPLIST_FILE = "FaceWeather/FaceWeather-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		211077E913E0005700D9BE97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FaceWeather.app/FaceWeather";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceWeatherTests/FaceWeatherTests-Prefix.pch";
+				INFOPLIST_FILE = "FaceWeatherTests/FaceWeatherTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		211077EA13E0005700D9BE97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FaceWeather.app/FaceWeather";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceWeatherTests/FaceWeatherTests-Prefix.pch";
+				INFOPLIST_FILE = "FaceWeatherTests/FaceWeatherTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		211077A313E0005600D9BE97 /* Build configuration list for PBXProject "FaceWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				211077E313E0005700D9BE97 /* Debug */,
+				211077E413E0005700D9BE97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		211077E513E0005700D9BE97 /* Build configuration list for PBXNativeTarget "FaceWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				211077E613E0005700D9BE97 /* Debug */,
+				211077E713E0005700D9BE97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		211077E813E0005700D9BE97 /* Build configuration list for PBXNativeTarget "FaceWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				211077E913E0005700D9BE97 /* Debug */,
+				211077EA13E0005700D9BE97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 211077A013E0005600D9BE97 /* Project object */;
+}
