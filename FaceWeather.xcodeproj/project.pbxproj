@@ -23,6 +23,15 @@
 		211077DD13E0005700D9BE97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 211077DB13E0005700D9BE97 /* InfoPlist.strings */; };
 		211077E013E0005700D9BE97 /* FaceWeatherTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 211077DF13E0005700D9BE97 /* FaceWeatherTests.h */; };
 		211077E213E0005700D9BE97 /* FaceWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 211077E113E0005700D9BE97 /* FaceWeatherTests.m */; };
+		211077F013E002F900D9BE97 /* ConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 211077EF13E002F900D9BE97 /* ConnectionOperation.m */; };
+		211077FF13E10E1700D9BE97 /* toru_inoue.png in Resources */ = {isa = PBXBuildFile; fileRef = 211077FE13E10E1700D9BE97 /* toru_inoue.png */; };
+		21C23D0713E13AD7003DAFF9 /* cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C23D0313E13AD7003DAFF9 /* cloudy.png */; };
+		21C23D0813E13AD7003DAFF9 /* fair.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C23D0413E13AD7003DAFF9 /* fair.png */; };
+		21C23D0913E13AD7003DAFF9 /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C23D0513E13AD7003DAFF9 /* rain.png */; };
+		21C23D0A13E13AD7003DAFF9 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C23D0613E13AD7003DAFF9 /* snow.png */; };
+		21C23D0F13E13BA8003DAFF9 /* LBXMLParserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C23D0E13E13BA8003DAFF9 /* LBXMLParserController.m */; };
+		21C23D1313E13F6B003DAFF9 /* FaceWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C23D1113E13F6B003DAFF9 /* FaceWeatherViewController.m */; };
+		21C23D1413E13F6B003DAFF9 /* FaceWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C23D1213E13F6B003DAFF9 /* FaceWeatherViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,24 +49,36 @@
 		211077AD13E0005600D9BE97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		211077AF13E0005600D9BE97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		211077B113E0005600D9BE97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		211077B513E0005600D9BE97 /* FaceWeather-Info.plist */ = {isa = PBXFileReference; path = "FaceWeather-Info.plist"; sourceTree = "<group>"; };
+		211077B513E0005600D9BE97 /* FaceWeather-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaceWeather-Info.plist"; sourceTree = "<group>"; };
 		211077B713E0005600D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		211077B913E0005600D9BE97 /* FaceWeather-Prefix.pch */ = {isa = PBXFileReference; path = "FaceWeather-Prefix.pch"; sourceTree = "<group>"; };
+		211077B913E0005600D9BE97 /* FaceWeather-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceWeather-Prefix.pch"; sourceTree = "<group>"; };
 		211077BA13E0005600D9BE97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		211077BC13E0005600D9BE97 /* FaceWeatherAppDelegate.h */ = {isa = PBXFileReference; path = FaceWeatherAppDelegate.h; sourceTree = "<group>"; };
+		211077BC13E0005600D9BE97 /* FaceWeatherAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceWeatherAppDelegate.h; sourceTree = "<group>"; };
 		211077BD13E0005600D9BE97 /* FaceWeatherAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceWeatherAppDelegate.m; sourceTree = "<group>"; };
-		211077C013E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = FaceWeatherAppDelegate_iPhone.h; path = iPhone/FaceWeatherAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		211077C013E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaceWeatherAppDelegate_iPhone.h; path = iPhone/FaceWeatherAppDelegate_iPhone.h; sourceTree = "<group>"; };
 		211077C113E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FaceWeatherAppDelegate_iPhone.m; path = iPhone/FaceWeatherAppDelegate_iPhone.m; sourceTree = "<group>"; };
 		211077C413E0005600D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		211077C713E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.h */ = {isa = PBXFileReference; name = FaceWeatherAppDelegate_iPad.h; path = iPad/FaceWeatherAppDelegate_iPad.h; sourceTree = "<group>"; };
+		211077C713E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaceWeatherAppDelegate_iPad.h; path = iPad/FaceWeatherAppDelegate_iPad.h; sourceTree = "<group>"; };
 		211077C813E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FaceWeatherAppDelegate_iPad.m; path = iPad/FaceWeatherAppDelegate_iPad.m; sourceTree = "<group>"; };
 		211077CB13E0005600D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
 		211077D213E0005700D9BE97 /* FaceWeatherTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceWeatherTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		211077DA13E0005700D9BE97 /* FaceWeatherTests-Info.plist */ = {isa = PBXFileReference; path = "FaceWeatherTests-Info.plist"; sourceTree = "<group>"; };
+		211077DA13E0005700D9BE97 /* FaceWeatherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaceWeatherTests-Info.plist"; sourceTree = "<group>"; };
 		211077DC13E0005700D9BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		211077DE13E0005700D9BE97 /* FaceWeatherTests-Prefix.pch */ = {isa = PBXFileReference; path = "FaceWeatherTests-Prefix.pch"; sourceTree = "<group>"; };
+		211077DE13E0005700D9BE97 /* FaceWeatherTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceWeatherTests-Prefix.pch"; sourceTree = "<group>"; };
 		211077DF13E0005700D9BE97 /* FaceWeatherTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceWeatherTests.h; sourceTree = "<group>"; };
 		211077E113E0005700D9BE97 /* FaceWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceWeatherTests.m; sourceTree = "<group>"; };
+		211077EF13E002F900D9BE97 /* ConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionOperation.m; path = Shared/ConnectionOperation.m; sourceTree = "<group>"; };
+		211077F113E0030B00D9BE97 /* ConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionOperation.h; path = Shared/ConnectionOperation.h; sourceTree = "<group>"; };
+		211077FE13E10E1700D9BE97 /* toru_inoue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toru_inoue.png; sourceTree = "<group>"; };
+		21C23D0313E13AD7003DAFF9 /* cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudy.png; sourceTree = "<group>"; };
+		21C23D0413E13AD7003DAFF9 /* fair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fair.png; sourceTree = "<group>"; };
+		21C23D0513E13AD7003DAFF9 /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		21C23D0613E13AD7003DAFF9 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		21C23D0D13E13BA8003DAFF9 /* LBXMLParserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXMLParserController.h; sourceTree = "<group>"; };
+		21C23D0E13E13BA8003DAFF9 /* LBXMLParserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXMLParserController.m; sourceTree = "<group>"; };
+		21C23D1013E13F6B003DAFF9 /* FaceWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceWeatherViewController.h; sourceTree = "<group>"; };
+		21C23D1113E13F6B003DAFF9 /* FaceWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceWeatherViewController.m; sourceTree = "<group>"; };
+		21C23D1213E13F6B003DAFF9 /* FaceWeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceWeatherViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				211077B313E0005600D9BE97 /* FaceWeather */,
+				211077FD13E1017000D9BE97 /* Resource */,
 				211077D813E0005700D9BE97 /* FaceWeatherTests */,
 				211077AC13E0005600D9BE97 /* Frameworks */,
 				211077AA13E0005600D9BE97 /* Products */,
@@ -118,8 +140,10 @@
 			children = (
 				211077BC13E0005600D9BE97 /* FaceWeatherAppDelegate.h */,
 				211077BD13E0005600D9BE97 /* FaceWeatherAppDelegate.m */,
+				21C23D1513E13F72003DAFF9 /* FaceWeatherViewControl */,
 				211077BF13E0005600D9BE97 /* iPhone */,
 				211077C613E0005600D9BE97 /* iPad */,
+				211077EB13E000AA00D9BE97 /* Shared */,
 				211077B413E0005600D9BE97 /* Supporting Files */,
 			);
 			path = FaceWeather;
@@ -174,6 +198,56 @@
 				211077DE13E0005700D9BE97 /* FaceWeatherTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		211077EB13E000AA00D9BE97 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				21C23D0C13E13B9C003DAFF9 /* LBXMLParserControl */,
+				21C23D0B13E13B87003DAFF9 /* ConnectionOperate */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		211077FD13E1017000D9BE97 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				21C23D0313E13AD7003DAFF9 /* cloudy.png */,
+				21C23D0413E13AD7003DAFF9 /* fair.png */,
+				21C23D0513E13AD7003DAFF9 /* rain.png */,
+				21C23D0613E13AD7003DAFF9 /* snow.png */,
+				211077FE13E10E1700D9BE97 /* toru_inoue.png */,
+			);
+			name = Resource;
+			path = FaceWeather;
+			sourceTree = "<group>";
+		};
+		21C23D0B13E13B87003DAFF9 /* ConnectionOperate */ = {
+			isa = PBXGroup;
+			children = (
+				211077F113E0030B00D9BE97 /* ConnectionOperation.h */,
+				211077EF13E002F900D9BE97 /* ConnectionOperation.m */,
+			);
+			name = ConnectionOperate;
+			sourceTree = "<group>";
+		};
+		21C23D0C13E13B9C003DAFF9 /* LBXMLParserControl */ = {
+			isa = PBXGroup;
+			children = (
+				21C23D0D13E13BA8003DAFF9 /* LBXMLParserController.h */,
+				21C23D0E13E13BA8003DAFF9 /* LBXMLParserController.m */,
+			);
+			name = LBXMLParserControl;
+			sourceTree = "<group>";
+		};
+		21C23D1513E13F72003DAFF9 /* FaceWeatherViewControl */ = {
+			isa = PBXGroup;
+			children = (
+				21C23D1013E13F6B003DAFF9 /* FaceWeatherViewController.h */,
+				21C23D1113E13F6B003DAFF9 /* FaceWeatherViewController.m */,
+				21C23D1213E13F6B003DAFF9 /* FaceWeatherViewController.xib */,
+			);
+			name = FaceWeatherViewControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +323,12 @@
 				211077B813E0005600D9BE97 /* InfoPlist.strings in Resources */,
 				211077C513E0005600D9BE97 /* MainWindow_iPhone.xib in Resources */,
 				211077CC13E0005600D9BE97 /* MainWindow_iPad.xib in Resources */,
+				211077FF13E10E1700D9BE97 /* toru_inoue.png in Resources */,
+				21C23D0713E13AD7003DAFF9 /* cloudy.png in Resources */,
+				21C23D0813E13AD7003DAFF9 /* fair.png in Resources */,
+				21C23D0913E13AD7003DAFF9 /* rain.png in Resources */,
+				21C23D0A13E13AD7003DAFF9 /* snow.png in Resources */,
+				21C23D1413E13F6B003DAFF9 /* FaceWeatherViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +368,9 @@
 				211077BE13E0005600D9BE97 /* FaceWeatherAppDelegate.m in Sources */,
 				211077C213E0005600D9BE97 /* FaceWeatherAppDelegate_iPhone.m in Sources */,
 				211077C913E0005600D9BE97 /* FaceWeatherAppDelegate_iPad.m in Sources */,
+				211077F013E002F900D9BE97 /* ConnectionOperation.m in Sources */,
+				21C23D0F13E13BA8003DAFF9 /* LBXMLParserController.m in Sources */,
+				21C23D1313E13F6B003DAFF9 /* FaceWeatherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +553,7 @@
 				211077E713E0005700D9BE97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		211077E813E0005700D9BE97 /* Build configuration list for PBXNativeTarget "FaceWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +562,7 @@
 				211077EA13E0005700D9BE97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

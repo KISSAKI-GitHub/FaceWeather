@@ -8,6 +8,12 @@
 
 #import "FaceWeatherAppDelegate.h"
 
+#import "FaceWeatherViewController.h"
+
+#import "ConnectionOperation.h"
+
+#import "LBXMLParserController.h"
+
 @implementation FaceWeatherAppDelegate
 
 
@@ -15,10 +21,100 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIView * baseView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height)];
+    [self.window addSubview:baseView];
+    
+    
+    iView = [[UIImageView alloc]initWithFrame:CGRectMake(self.window.frame.origin.x, self.window.frame.origin.y, self.window.frame.size.width, self.window.frame.size.height)];
+    [baseView addSubview:iView];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(tapped:) name:@"BUTTON_TAPPED" object:nil];
+    
+    FaceWeatherViewController * fWeatherViewCont = [[FaceWeatherViewController alloc]init];
+    
+    [baseView addSubview:fWeatherViewCont.view];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
+
+
+//ボタンが押されたら動く
+- (void) tapped:(NSNotification * )notif {
+    ConnectionOperation * cOperation = [[ConnectionOperation alloc] initConnectionOperationWithID:@"concurrent" withMasterName:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(success:) name:@"ANSWER_SUCCEEDED" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(failure:) name:@"ANSWER_FAILURE" object:nil];
+    
+    
+    NSMutableURLRequest * currentRequest = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://weather.livedoor.com/forecast/webservice/rest/v1?city=46&day=today"]];
+	[currentRequest setHTTPMethod:@"GET"];
+	
+    [cOperation startConnect:currentRequest withConnectionName:@"connectionName"];
+}
+
+
+
+
+- (void) success:(NSNotification * )notif {
+    NSLog(@"通信成功！   %@", notif);
+    NSDictionary * dict = (NSDictionary * )[notif userInfo];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(color:) name:@"WEATHER_NUMBER" object:nil];
+    
+    LBXMLParserController * lBXmlParsCont = [[LBXMLParserController alloc]initLBXMLParserController];
+    [lBXmlParsCont lBXMLParserControlCenter:[dict valueForKey:@"data"]];
+    
+    
+}
+
+- (void) failure:(NSNotification * )notif {
+    NSLog(@"通信失敗！   %@", notif);
+    UIView * failedView = [[UIView alloc]initWithFrame:CGRectMake(self.window.frame.origin.x, self.window.frame.origin.y, self.window.frame.size.width, self.window.frame.size.height/10)];
+    [failedView setBackgroundColor:[UIColor redColor]];
+    [self.window addSubview:failedView];
+}
+
+
+
+
+- (void) color:(NSNotification * )notif {
+    NSDictionary * dict = (NSDictionary * )[notif userInfo];
+    NSString * numStr = [dict valueForKey:@"numStr"];
+    
+    
+    int num = [numStr intValue];
+    
+    /*
+     1.gif 〜 7.gif は 晴れ
+     8.gif 〜 14.gif は曇り
+     15.gif 〜 22.gif は 雨
+     23.gif 〜 30.gif は 雪
+     */
+    
+    [iView setBackgroundColor:[UIColor blackColor]];
+    
+    
+    if (1 <= num && num <= 7) {
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fair" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+    }
+    if (8 <= num && num <= 14) {
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cloudy" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+    }
+    if (15 <= num && num <= 22) {
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"rain" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+    }
+    if (23 <= num && num <= 30) {
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"snow" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+    }
+    
+   // [self.window addSubview:iView];
+}
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

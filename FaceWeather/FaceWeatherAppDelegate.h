@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FaceWeatherAppDelegate : NSObject <UIApplicationDelegate> {
-
+    UIImageView * iView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
