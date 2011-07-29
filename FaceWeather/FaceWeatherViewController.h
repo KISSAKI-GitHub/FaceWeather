@@ -12,6 +12,9 @@
 @interface FaceWeatherViewController : UIViewController {
     
 }
+
 - (IBAction)yokohamaTapped:(id)sender;
+- (IBAction)tan_goTapped:(id)sender;
+
 
 @end

@@ -14,6 +14,11 @@
 
 #import "LBXMLParserController.h"
 
+
+/**
+ AppDelegate:アプリケーションの全ての権限がある場所→アプリケーションのスタートポイント。
+ 起動したらまず、このファイルのメソッドが呼ばれる。
+ */
 @implementation FaceWeatherAppDelegate
 
 
@@ -28,6 +33,11 @@
     iView = [[UIImageView alloc]initWithFrame:CGRectMake(self.window.frame.origin.x, self.window.frame.origin.y, self.window.frame.size.width, self.window.frame.size.height)];
     [baseView addSubview:iView];
     
+    
+    failedView = [[UIView alloc]initWithFrame:CGRectMake(self.window.frame.origin.x, self.window.frame.origin.y, self.window.frame.size.width, self.window.frame.size.height/10)];
+    
+    
+    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(tapped:) name:@"BUTTON_TAPPED" object:nil];
     
     FaceWeatherViewController * fWeatherViewCont = [[FaceWeatherViewController alloc]init];
@@ -39,8 +49,19 @@
 }
 
 
-//ボタンが押されたら動く
+
+/**
+ ボタンが押されたのを受け取って、通信→通信結果をとってくる
+ */
 - (void) tapped:(NSNotification * )notif {
+    NSDictionary * dict = (NSDictionary * )[notif userInfo];
+    NSAssert([dict valueForKey:@"placeNumber"], @"placeNumber required");
+    
+    
+    [iView setBackgroundColor:[UIColor blackColor]];
+    [failedView removeFromSuperview];
+    
+    
     ConnectionOperation * cOperation = [[ConnectionOperation alloc] initConnectionOperationWithID:@"concurrent" withMasterName:nil];
     
     
@@ -48,7 +69,9 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(failure:) name:@"ANSWER_FAILURE" object:nil];
     
     
-    NSMutableURLRequest * currentRequest = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://weather.livedoor.com/forecast/webservice/rest/v1?city=46&day=today"]];
+    NSString * urlString = [NSString stringWithFormat:@"http://weather.livedoor.com/forecast/webservice/rest/v1?city=46&day=today", [dict valueForKey:@"placeNumber"]];
+    
+    NSMutableURLRequest * currentRequest = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:urlString]];
 	[currentRequest setHTTPMethod:@"GET"];
 	
     [cOperation startConnect:currentRequest withConnectionName:@"connectionName"];
@@ -56,29 +79,34 @@
 
 
 
-
+/**
+ 通信結果、成功
+ */
 - (void) success:(NSNotification * )notif {
-    NSLog(@"通信成功！   %@", notif);
+    NSLog(@"通信成功！");
     NSDictionary * dict = (NSDictionary * )[notif userInfo];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(color:) name:@"WEATHER_NUMBER" object:nil];
     
     LBXMLParserController * lBXmlParsCont = [[LBXMLParserController alloc]initLBXMLParserController];
     [lBXmlParsCont lBXMLParserControlCenter:[dict valueForKey:@"data"]];
-    
-    
 }
 
+
+/**
+ 通信結果、失敗
+ */
 - (void) failure:(NSNotification * )notif {
-    NSLog(@"通信失敗！   %@", notif);
-    UIView * failedView = [[UIView alloc]initWithFrame:CGRectMake(self.window.frame.origin.x, self.window.frame.origin.y, self.window.frame.size.width, self.window.frame.size.height/10)];
-    [failedView setBackgroundColor:[UIColor redColor]];
+    NSLog(@"通信失敗！");
+    
     [self.window addSubview:failedView];
 }
 
 
 
-
+/**
+ 解析したXMLから結果の数値を取り出して、天気の表示へ。
+ */
 - (void) color:(NSNotification * )notif {
     NSDictionary * dict = (NSDictionary * )[notif userInfo];
     NSString * numStr = [dict valueForKey:@"numStr"];
@@ -87,29 +115,32 @@
     int num = [numStr intValue];
     
     /*
-     1.gif 〜 7.gif は 晴れ
-     8.gif 〜 14.gif は曇り
-     15.gif 〜 22.gif は 雨
-     23.gif 〜 30.gif は 雪
+     1 〜 7 は 晴れ
+     8 〜 14 は曇り
+     15 〜 22 は 雨
+     23 〜 30 は 雪
      */
     
     [iView setBackgroundColor:[UIColor blackColor]];
     
     
     if (1 <= num && num <= 7) {
-        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fair" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fair" ofType:@"png"]]];
     }
     if (8 <= num && num <= 14) {
-        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cloudy" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cloudy" ofType:@"png"]]];
     }
     if (15 <= num && num <= 22) {
-        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"rain" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"rain" ofType:@"png"]]];
     }
     if (23 <= num && num <= 30) {
-        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"snow" ofType:@"png"]]];// = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"fair.png"]];
+        [iView setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"snow" ofType:@"png"]]];
     }
-    
-   // [self.window addSubview:iView];
+    [iView setAlpha:0.0];
+    [UIView beginAnimations:@"appear" context:iView];
+    [iView setAnimationDuration:2.0];
+    [iView setAlpha:1.0];
+    [UIView commitAnimations];
 }
 
 

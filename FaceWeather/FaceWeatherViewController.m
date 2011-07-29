@@ -54,8 +54,25 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+/**
+ inoue
+ */
 - (IBAction)yokohamaTapped:(id)sender {
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"BUTTON_TAPPED" object:nil];
+    NSDictionary * placeDict = [[NSDictionary alloc]initWithObjectsAndKeys:[NSNumber numberWithInt:46], @"placeNumber",nil];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"BUTTON_TAPPED" object:nil userInfo:placeDict];
     
 }
+
+/**
+ tan_go
+ */
+- (IBAction)tan_goTapped:(id)sender {
+    NSDictionary * placeDict = [[NSDictionary alloc]initWithObjectsAndKeys:[NSNumber numberWithInt:48], @"placeNumber",nil];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"BUTTON_TAPPED" object:nil userInfo:placeDict];
+    
+}
+
+
 @end

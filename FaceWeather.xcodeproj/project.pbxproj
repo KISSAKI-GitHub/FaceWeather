@@ -32,6 +32,7 @@
 		21C23D0F13E13BA8003DAFF9 /* LBXMLParserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C23D0E13E13BA8003DAFF9 /* LBXMLParserController.m */; };
 		21C23D1313E13F6B003DAFF9 /* FaceWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C23D1113E13F6B003DAFF9 /* FaceWeatherViewController.m */; };
 		21C23D1413E13F6B003DAFF9 /* FaceWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C23D1213E13F6B003DAFF9 /* FaceWeatherViewController.xib */; };
+		21C23E0613E16383003DAFF9 /* tan_go.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C23E0513E16383003DAFF9 /* tan_go.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		21C23D1013E13F6B003DAFF9 /* FaceWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceWeatherViewController.h; sourceTree = "<group>"; };
 		21C23D1113E13F6B003DAFF9 /* FaceWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceWeatherViewController.m; sourceTree = "<group>"; };
 		21C23D1213E13F6B003DAFF9 /* FaceWeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceWeatherViewController.xib; sourceTree = "<group>"; };
+		21C23E0513E16383003DAFF9 /* tan_go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tan_go.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		211077FD13E1017000D9BE97 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				21C23E0513E16383003DAFF9 /* tan_go.png */,
 				21C23D0313E13AD7003DAFF9 /* cloudy.png */,
 				21C23D0413E13AD7003DAFF9 /* fair.png */,
 				21C23D0513E13AD7003DAFF9 /* rain.png */,
@@ -329,6 +332,7 @@
 				21C23D0913E13AD7003DAFF9 /* rain.png in Resources */,
 				21C23D0A13E13AD7003DAFF9 /* snow.png in Resources */,
 				21C23D1413E13F6B003DAFF9 /* FaceWeatherViewController.xib in Resources */,
+				21C23E0613E16383003DAFF9 /* tan_go.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

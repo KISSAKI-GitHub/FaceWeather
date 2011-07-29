@@ -11,6 +11,8 @@
 @implementation LBXMLParserController
 
 
+int m_flagCount = 0;
+
 - (id) initLBXMLParserController {
 	if ((self = [super init])) {
 		[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(lBXMLParserControlCenter:) name:@"XMLParser" object:nil];
@@ -19,7 +21,7 @@
 	return self;
 }
 - (void) lBXMLParserControlCenter:(NSData * )data {
-	
+	m_flagCount = 0;
         
 	NSXMLParser * parser = [[NSXMLParser alloc] initWithData:data];
     
@@ -31,7 +33,6 @@
     [parser parse];
 }
 
-int m_flagCount = 0;
 - (void)parser:(NSXMLParser * )parser didStartElement:(NSString * )elementName namespaceURI:(NSString * )namespaceURI qualifiedName:(NSString * )qName attributes:(NSDictionary * )attributeDict {
 	//NSLog(@"elementName	%@	namespaceURI	%@	qName	%@	attributeDict	%@", elementName, namespaceURI, qName, attributeDict);
 	if ([elementName isEqualToString:@"url"]) {

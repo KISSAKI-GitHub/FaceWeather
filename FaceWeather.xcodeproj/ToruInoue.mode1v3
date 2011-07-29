@@ -375,9 +375,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>218B03DA13E1385400EF0979</string>
+				<string>21BFC6F613E28B2100A45337</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>218B03DB13E1385400EF0979</string>
+				<string>21BFC6F713E28B2100A45337</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -516,7 +516,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>21082E1A12A0144C000149B7</string>
-		<string>/Users/ToruInoue/Desktop/FaceWeather/FaceWeather.xcodeproj</string>
+		<string>/Users/ToruInoue/Desktop/himitu-lv2/FaceWeather/FaceWeather.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>10 179 1113 567 0 0 1366 746 </string>
@@ -596,7 +596,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>21082E1A12A0144C000149B7</string>
-				<string>218B03DC13E1385400EF0979</string>
+				<string>21BFC6F813E28B2100A45337</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
